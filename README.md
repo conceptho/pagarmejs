@@ -3,7 +3,7 @@ Javascript client to pagar.me payment gateway.
 
 ## Installation
 
-    npm install pagarme.js
+    npm install pagarmejs
 
 ## Usage
 
@@ -113,7 +113,7 @@ Pagarme.customer.create(api_key,{
 - transaction.refund(api_key, id)
 - transaction.calculateInstallmentsAmount(api_key, data)
 
-###zipcode
+###ZIPCODE
 - zipcode.find(api_key, zipcode)
 
 ###FINGERPRINT
