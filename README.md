@@ -9,7 +9,7 @@ Javascript client to pagar.me payment gateway.
 
 
 ```js
-var Pagarme = require('pagarme.js');
+var Pagarme = require('pagarmejs');
 
 api_key = "pagar.me secret key";
 
@@ -43,6 +43,7 @@ Pagarme.customer.create(api_key,{
 
 
 ```
+[Pagar.me official documentation!](https://docs.pagar.me/api/)
 
 ## Available Methods
 
