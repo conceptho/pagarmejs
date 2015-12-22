@@ -1,7 +1,7 @@
 {
   "name": "pagarmejs",
-  "version": "1.0.2",
-  "description": "Javascript SDK library to pagar.me payment gateway",
+  "version": "1.0.3",
+  "description": "Javascript client library to pagar.me payment gateway",
   "main": "index.js",
   "scripts": {
     "test": ""
