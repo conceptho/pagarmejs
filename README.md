@@ -79,9 +79,9 @@ Pagarme.customer.create(api_key,{
 - balance.operationsFindById(api_key, id)
 
 ###BANK_ACCOUNTS
-- balance.findById(api_key, id)
-- balance.create(api_key, data)
-- balance.all(api_key, data)
+- bank_account.findById(api_key, id)
+- bank_account.create(api_key, data)
+- bank_account.all(api_key, data)
 
 ###RECIPIENTS
 - recipient.findById(api_key, id)
