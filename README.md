@@ -9,10 +9,10 @@ Javascript client to pagar.me payment gateway.
 
 
 ```js
-var pagarme = require('pagarmejs');
-var Pagarme = new pagarme('<API_KEY>');
+var Pagarme = require('pagarmejs');
+var pagarme = new Pagarme('<API_KEY>');
 
-Pagarme.customer.create({
+pagarme.customer.create({
      document_number: '18152564000105',
      name:'client name',
      email:'eee@email.com',
@@ -35,7 +35,7 @@ Pagarme.customer.create({
      }
   })
   .then(function(){
-    return Pagarme.customer.all({count:2});
+    return pagarme.customer.all({count:2});
   })
   .then(console.log)
   .catch(console.log)
