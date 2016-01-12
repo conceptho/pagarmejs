@@ -1,5 +1,5 @@
-var pagarme_class = require('../index.js');
-var Pagarme = new pagarme_class('<API_KEY>');
+var pagarme = require('../index.js');
+var Pagarme = new pagarme('<API_KEY>');
 
 
 

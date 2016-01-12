@@ -7,6 +7,11 @@ var restApi = rest('https://api.pagar.me/1/', {
     defaultFormat: ''
 });
 
+
+function pagarMe(api_key){
+  this.initialize(api_key);
+}
+
 //METHODS
 
 function getAll(model, api_key, data){
@@ -100,10 +105,6 @@ function modelCancel(model, api_key, id){
     }
     return false;
 };
-
-function pagarMe(api_key){
-  this.initialize(api_key);
-}
 
 var app_key = "";
 
