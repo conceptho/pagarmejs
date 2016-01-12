@@ -9,11 +9,10 @@ Javascript client to pagar.me payment gateway.
 
 
 ```js
-var Pagarme = require('pagarmejs');
+var pagarme_class = require('pagarmejs');
+var Pagarme = new pagarme_class('<API_KEY>');
 
-api_key = "pagar.me secret key";
-
-Pagarme.customer.create(api_key,{
+Pagarme.customer.create({
      document_number: '18152564000105',
      name:'client name',
      email:'eee@email.com',
@@ -36,7 +35,7 @@ Pagarme.customer.create(api_key,{
      }
   })
   .then(function(){
-    return Pagarme.customer.all(api_key,{count:2});
+    return Pagarme.customer.all({count:2});
   })
   .then(console.log)
   .catch(console.log)
@@ -48,73 +47,73 @@ Pagarme.customer.create(api_key,{
 ## Available Methods
 
 ###CARDS
-- card.findById(api_key, id)
-- card.create(api_key, data)
+- card.findById(id)
+- card.create(data)
 
 ###CUSTOMERS
-- customer.findById(api_key, id)
-- customer.create(api_key, data)
-- customer.all(api_key, data)
+- customer.findById(id)
+- customer.create(data)
+- customer.all(data)
 
 ###PLANS
-- plan.findById(api_key, id)
-- plan.create(api_key, data)
-- plan.all(api_key, data)
-- plan.save(api_key, id, data)
+- plan.findById(id)
+- plan.create(data)
+- plan.all(data)
+- plan.save(id, data)
 
 ###SUBSCRIPTIONS
-- subscription.findById(api_key, id)
-- subscription.create(api_key, data)
-- subscription.all(api_key, data)
-- subscription.save(api_key, id, data)
-- subscription.cancel(api_key, id)
+- subscription.findById(id)
+- subscription.create(data)
+- subscription.all(data)
+- subscription.save(id, data)
+- subscription.cancel(id)
 
 ###PAYABLES
-- payable.findById(api_key, id)
-- payable.all(api_key, data)
+- payable.findById(id)
+- payable.all(data)
 
 ###BALANCE
-- balance.findById(api_key, id)
-- balance.operationsAll(api_key, data)
-- balance.operationsFindById(api_key, id)
+- balance.findById(id)
+- balance.operationsAll(data)
+- balance.operationsFindById(id)
 
 ###BANK_ACCOUNTS
-- bank_account.findById(api_key, id)
-- bank_account.create(api_key, data)
-- bank_account.all(api_key, data)
+- bank_account.findById(id)
+- bank_account.create(data)
+- bank_account.all(data)
 
 ###RECIPIENTS
-- recipient.findById(api_key, id)
-- recipient.create(api_key, data)
-- recipient.all(api_key, data)
-- recipient.save(api_key, id, data)
-- recipient.balanceFindById(api_key, id)
-- recipient.operationsAll(api_key, recipient_id, data)
+- recipient.findById(id)
+- recipient.create(data)
+- recipient.all(data)
+- recipient.save(id, data)
+- recipient.balanceFindById(id)
+- recipient.operationsAll(recipient_id, data)
 
 ###TRANSFERS
-- transfer.findById(api_key, id)
-- transfer.create(api_key, data)
-- transfer.all(api_key, data)
-- transfer.cancel(api_key, id)
+- transfer.findById(id)
+- transfer.create(data)
+- transfer.all(data)
+- transfer.cancel(id)
 
 ###TRANSACTIONS
-- transaction.findById(api_key, id)
-- transaction.create(api_key, data)
-- transaction.all(api_key, data)
-- transaction.splitRulesAll(api_key, id)
-- transaction.splitRulesFindById(api_key, transaction_id, split_id)
-- transaction.payablesAll(api_key, id)
-- transaction.payablesFindById(api_key, transaction_id, payable_id)
-- transaction.postbackAll(api_key, id)
-- transaction.postbackFindById(api_key, transaction_id, postback_id)
-- transaction.postbackRedeliver(api_key, transaction_id, postback_id)
-- transaction.eventsAll(api_key, id)
-- transaction.operationsAll(api_key, id)
-- transaction.refund(api_key, id)
-- transaction.calculateInstallmentsAmount(api_key, data)
+- transaction.findById(id)
+- transaction.create(data)
+- transaction.all(data)
+- transaction.splitRulesAll(id)
+- transaction.splitRulesFindById(transaction_id, split_id)
+- transaction.payablesAll(id)
+- transaction.payablesFindById(transaction_id, payable_id)
+- transaction.postbackAll(id)
+- transaction.postbackFindById(transaction_id, postback_id)
+- transaction.postbackRedeliver(transaction_id, postback_id)
+- transaction.eventsAll(id)
+- transaction.operationsAll(id)
+- transaction.refund(id)
+- transaction.calculateInstallmentsAmount(data)
 
 ###ZIPCODE
-- zipcode.find(api_key, zipcode)
+- zipcode.find(zipcode)
 
 ###FINGERPRINT
-- fingerprint.verify(api_key, id, fingerprint_res)
+- fingerprint.verify(id, fingerprint_res)
