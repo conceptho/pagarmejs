@@ -1,6 +1,6 @@
 {
   "name": "pagarmejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript client library to pagar.me payment gateway",
   "main": "index.js",
   "scripts": {
