@@ -130,7 +130,6 @@ pagarMe.prototype = {
           return modelCreate('customers', app_key, data);
       },
       "all" : function(data){
-        console.log(app_key);
           return getAll('customers',app_key,data);
       },
       "findById" : function (id){
