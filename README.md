@@ -1,4 +1,6 @@
 # Pagarmejs
+
+[![Join the chat at https://gitter.im/conceptho/pagarmejs](https://badges.gitter.im/conceptho/pagarmejs.svg)](https://gitter.im/conceptho/pagarmejs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Javascript client to pagar.me payment gateway.
 
 ## Installation
